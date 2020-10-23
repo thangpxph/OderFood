@@ -1,9 +1,11 @@
-package com.example.oderfood;
+package com.example.oderfood.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+
+import com.example.oderfood.R;
 
 public class MainActivity extends AppCompatActivity {
 
