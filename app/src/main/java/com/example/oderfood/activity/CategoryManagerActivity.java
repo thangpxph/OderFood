@@ -49,6 +49,7 @@ public class CategoryManagerActivity extends AppCompatActivity {
     public void addCategory(){
         categoryList.add(new Category(R.drawable.orange, "Món khai vị"));
         categoryList.add(new Category(R.drawable.chili, "Món nướng"));
+//hfdsjahjfhsakdfh
         categoryList.add(new Category(R.drawable.lau, "Món lẩu"));
         categoryList.add(new Category(R.drawable.cocacola, "Đồ uống"));
         categoryList.add(new Category(R.drawable.orange, "Món khai vị"));
