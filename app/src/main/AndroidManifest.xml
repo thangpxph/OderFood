@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.DangNhapActivity"></activity>
+        <activity android:name=".activity.otp.OtpActivity"></activity>
+        <activity android:name=".activity.Gui.GuiActivity" />
+        <activity android:name=".activity.dangky.DangKyActivity" />
+        <activity android:name=".activity.dangnhap.DangNhapActivity" />
         <activity android:name=".activity.CategoryManagerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
