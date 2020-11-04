@@ -1,4 +1,4 @@
-package com.example.oderfood.activity.Gui;
+package com.example.oderfood.activity.gui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
