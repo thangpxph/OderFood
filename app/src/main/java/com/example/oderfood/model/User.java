@@ -1,13 +1,13 @@
 package com.example.oderfood.model;
 
 public class User {
-    String id;
-    String email;
-    String password;
-    String name;
-    String phone;
-    String solantoian;
-    String danhgia;
+   public String id;
+    public String email;
+    public String password;
+    public String name;
+    public String phone;
+    public String solantoian;
+    public String danhgia;
 
     public User(String id, String email, String password, String name, String phone, String solantoian, String danhgia) {
         this.id = id;

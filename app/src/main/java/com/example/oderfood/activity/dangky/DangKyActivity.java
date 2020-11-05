@@ -40,7 +40,6 @@ public class DangKyActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
                 User user = new User();
                 user.setName(""+ System.currentTimeMillis());
                 user.setPhone("");
@@ -57,6 +56,18 @@ public class DangKyActivity extends AppCompatActivity {
                 }
             }
         });
+
+    }
+
+    public void btnDangKy(View view) {
+
+        String name= edtHoTen.getText().toString();
+        String sodienthoai = edtSoDienThoai.getText().toString();
+        String pass = edtMatKhau.getText().toString();
+
+        userSql = new UserSql(this);
+
+        User user = new User();
 
     }
 }
