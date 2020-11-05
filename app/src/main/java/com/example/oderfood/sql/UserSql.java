@@ -6,12 +6,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
 
 import com.example.oderfood.model.User;
 
 public class UserSql extends SQLiteOpenHelper {
-    public UserSql(@Nullable Context context) {
+    public UserSql(Context context) {
         super(context, "user.db", null, 1);
     }
     public static final String TABLE_NAME = "User";
@@ -57,4 +56,3 @@ public class UserSql extends SQLiteOpenHelper {
     }
     
 }
-///....
