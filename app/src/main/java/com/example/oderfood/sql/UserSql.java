@@ -50,4 +50,5 @@ public class UserSql extends SQLiteOpenHelper {
 
         return  result;
     }
+    
 }

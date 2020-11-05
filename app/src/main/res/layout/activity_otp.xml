@@ -50,7 +50,7 @@
         android:ems="10"
         android:gravity="center"
         android:hint="Nhập Mã OTP"
-        android:inputType="textPassword"
+        android:inputType="textWebEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
