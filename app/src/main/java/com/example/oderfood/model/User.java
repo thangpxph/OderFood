@@ -19,6 +19,10 @@ public class User {
         this.danhgia = danhgia;
     }
 
+    public User() {
+
+    }
+
     public String getId() {
         return id;
     }
