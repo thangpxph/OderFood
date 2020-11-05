@@ -18,15 +18,17 @@ public class UserSql extends SQLiteOpenHelper {
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_EMAIL = "email";
     public static final String COLUMN_PASSWORD = "password";
+    public static final String COLUMN_NAME = "name";
     public static final String COLUMN_PHONE = "phone";
     public static final String COLUMN_SOLANTOIAN = "solantoian";
     public static final String COLUMN_DANHGIA = "danhgia";
 
 
+
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+" ("+COLUMN_ID+" INTEGER PRIMARY KEY," +
-                ""+COLUMN_EMAIL+" VARCHAR,"+COLUMN_PASSWORD+" VARCHAR,"+COLUMN_PHONE+" VARCHAR,"+COLUMN_SOLANTOIAN+" VARCHAR,"+COLUMN_DANHGIA+" VARCHAR)";
+                ""+COLUMN_EMAIL+" VARCHAR,"+COLUMN_PASSWORD+" VARCHAR,"+COLUMN_NAME+" VARCHAR,"+COLUMN_PHONE+" VARCHAR,"+COLUMN_SOLANTOIAN+" VARCHAR,"+COLUMN_DANHGIA+" VARCHAR)";
         Log.e("SQL",CREATE_TABLE);
         sqLiteDatabase.execSQL(CREATE_TABLE);
     }
@@ -42,6 +44,7 @@ public class UserSql extends SQLiteOpenHelper {
        contentValues.put(COLUMN_ID,user.getId());
        contentValues.put(COLUMN_EMAIL,user.getEmail());
        contentValues.put(COLUMN_PASSWORD,user.getPassword());
+       contentValues.put(COLUMN_NAME,user.getName());
        contentValues.put(COLUMN_PHONE,user.getPhone());
        contentValues.put(COLUMN_SOLANTOIAN,user.getSolantoian());
        contentValues.put(COLUMN_DANHGIA,user.getDanhgia());
