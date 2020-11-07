@@ -12,13 +12,14 @@
         <activity android:name=".activity.otp.OtpActivity"></activity>
         <activity android:name=".activity.gui.GuiActivity" />
         <activity android:name=".activity.dangky.DangKyActivity" />
-        <activity android:name=".activity.dangnhap.DangNhapActivity" />
-        <activity android:name=".activity.CategoryManagerActivity">
+        <activity android:name=".activity.dangnhap.DangNhapActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activity.CategoryManagerActivity">
         </activity>
         <activity android:name=".activity.MainActivity" />
     </application>
