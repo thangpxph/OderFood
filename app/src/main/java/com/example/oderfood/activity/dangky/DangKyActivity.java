@@ -31,7 +31,6 @@ public class DangKyActivity extends AppCompatActivity {
         edtSoDienThoai = findViewById(R.id.edtSoDienThoai);
         edtMatKhau = findViewById(R.id.edtMatKhau);
 
-
         userSql = new UserSql(DangKyActivity.this);
 
         btnDangKy =findViewById(R.id.btnDangKy);

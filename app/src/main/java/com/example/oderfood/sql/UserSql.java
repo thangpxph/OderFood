@@ -40,6 +40,7 @@ public class UserSql extends SQLiteOpenHelper {
    public long insertUser(User user){
 
        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+
        ContentValues contentValues = new ContentValues();
 
        contentValues.put(COLUMN_ID,user.getId());

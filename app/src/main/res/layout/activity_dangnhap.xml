@@ -103,6 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvQuenMatKhau" />
 
     <TextView
+        android:onClick="dangKy"
         android:textColor="#FF9800"
         android:gravity="center"
         android:id="@+id/tvDangKy"

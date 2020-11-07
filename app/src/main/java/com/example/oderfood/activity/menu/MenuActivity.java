@@ -1,18 +1,16 @@
-package com.example.oderfood.activity;
+package com.example.oderfood.activity.menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import com.example.oderfood.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.e("TAG","hi");
+        setContentView(R.layout.activity_menu);
     }
 }

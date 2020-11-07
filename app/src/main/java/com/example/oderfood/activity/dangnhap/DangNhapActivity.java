@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 import com.example.oderfood.R;
 import com.example.oderfood.activity.dangky.DangKyActivity;
+import com.example.oderfood.activity.menu.MenuActivity;
 import com.example.oderfood.sql.UserSql;
 
 public class DangNhapActivity extends AppCompatActivity {
@@ -25,10 +26,15 @@ public class DangNhapActivity extends AppCompatActivity {
         btnDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DangNhapActivity.this, DangKyActivity.class);
+                Intent intent = new Intent(DangNhapActivity.this, MenuActivity.class);
                 startActivity(intent);
 
             }
         });
+    }
+
+    public void dangKy(View view) {
+        Intent intent = new Intent(DangNhapActivity.this, DangKyActivity.class);
+        startActivity(intent);
     }
 }
