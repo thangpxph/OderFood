@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.otp.OtpActivity"></activity>
+        <activity android:name=".activity.otp.OtpActivity"/>
         <activity android:name=".activity.gui.GuiActivity" />
         <activity android:name=".activity.dangky.DangKyActivity" />
         <activity android:name=".activity.dangnhap.DangNhapActivity">
