@@ -21,7 +21,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:onClick="btnDangKy"
         android:id="@+id/edtHoTen"
         android:layout_width="300dp"
         android:layout_height="50dp"

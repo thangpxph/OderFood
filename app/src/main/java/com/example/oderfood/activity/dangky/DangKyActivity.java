@@ -26,19 +26,25 @@ public class DangKyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dang_ky);
         edtHoTen = findViewById(R.id.edtHoTen);
         edtSoDienThoai = findViewById(R.id.edtSoDienThoai);
-        edtMatKhau = findViewById(R.id.edtMatKhau);
+        edtMatKhau = findViewById(R.id.edtMatKhauDK);
         userSql = new UserSql(DangKyActivity.this);
         btnDangKy = findViewById(R.id.btnDangKy);
         btnDangKy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                insertMsg();
+
+                User user = User.builder()
+                        .name(edtHoTen.getText().toString())
+                        .phone(edtSoDienThoai.getText().toString())
+                        .password(edtMatKhau.getText().toString())
+                        .build();
+                insertMsg(user);
             }
         });
     }
 
-    private void insertMsg() {
-        User user = User.builder().name("name" + System.currentTimeMillis()).phone("phone").password("password").build();
+    private void insertMsg(User user) {
+
         long result = userSql.insertUser(user);
         if (result > 0) {
             alertMsg("Đăng Ký Thành Công");

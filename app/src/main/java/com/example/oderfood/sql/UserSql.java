@@ -38,6 +38,7 @@ public class UserSql extends SQLiteOpenHelper {
 
     public long insertUser(User user) {
         SQLiteDatabase sqLiteDatabase = null;
+        Log.i("user input: {}",user.toString());
         try {
             sqLiteDatabase = this.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
