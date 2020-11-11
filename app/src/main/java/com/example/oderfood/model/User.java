@@ -20,4 +20,7 @@ public class User {
     public String solantoian;
     public String danhgia;
 
+ public User(String email, String password) {
+
+ }
 }

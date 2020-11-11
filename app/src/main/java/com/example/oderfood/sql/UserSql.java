@@ -2,6 +2,7 @@ package com.example.oderfood.sql;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -13,6 +14,8 @@ public class UserSql extends SQLiteOpenHelper {
     public UserSql(Context context) {
         super(context, "user.db", null, 1);
     }
+
+    UserSql userSql;
 
     public static final String TABLE_NAME = "User";
     public static final String COLUMN_ID = "id";
@@ -59,5 +62,11 @@ public class UserSql extends SQLiteOpenHelper {
         }
         return 0;
     }
+
+//    public boolean isLogin(User user){
+//        String sqlSelect = "SELECT email, password from User WHERE email =? and password =?";
+//        String email = user.getEmail();
+//        String password = user.getPassword();
+//    }
 
 }
