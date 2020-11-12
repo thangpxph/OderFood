@@ -10,6 +10,9 @@ import android.util.Log;
 
 import com.example.oderfood.model.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserSql extends SQLiteOpenHelper {
     public UserSql(Context context) {
         super(context, "user.db", null, 1);
@@ -41,7 +44,7 @@ public class UserSql extends SQLiteOpenHelper {
 
     public long insertUser(User user) {
         SQLiteDatabase sqLiteDatabase = null;
-        Log.i("user input: {}",user.toString());
+        Log.i("user input: {}", user.toString());
         try {
             sqLiteDatabase = this.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
@@ -63,10 +66,30 @@ public class UserSql extends SQLiteOpenHelper {
         return 0;
     }
 
-//    public boolean isLogin(User user){
-//        String sqlSelect = "SELECT email, password from User WHERE email =? and password =?";
-//        String email = user.getEmail();
-//        String password = user.getPassword();
-//    }
-
+    public User getUser(String email) {
+        SQLiteDatabase sqLiteDatabase = null;
+        String query = "SELECT email, password from User WHERE email =?";
+        try {
+            sqLiteDatabase = this.getReadableDatabase();
+            String whereclause = "email=?";
+            String[] whereargs = new String[]{String.valueOf(email)};
+            Cursor csr = sqLiteDatabase.query(TABLE_NAME, null, whereclause, whereargs, null, null, null);
+            User user = null;
+            if (csr.moveToFirst()) {
+                user = User.builder()
+                        .id(csr.getString(0))
+                        .email(csr.getString(1))
+                        .password(csr.getString(2))
+                        .build();
+            }
+            return user;
+        } catch (Exception e) {
+            Log.e("ERROR", "Ko tim thay user", e);
+        } finally {
+            if (sqLiteDatabase != null) {
+                sqLiteDatabase.close();
+            }
+        }
+        return null;
+    }
 }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +20,7 @@ import com.example.oderfood.sql.UserSql;
 public class DangNhapActivity extends AppCompatActivity {
 
     private Button btnDangNhap;
-    private EditText edtEmail,edtPassWord;
+    private EditText edtEmail, edtPassWord;
     UserSql userSql;
 
     @Override
@@ -27,7 +28,6 @@ public class DangNhapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dangnhap);
         btnDangNhap = findViewById(R.id.btnDangNhap);
-
         edtEmail = findViewById(R.id.edtEmailDN);
         edtPassWord = findViewById(R.id.edtMatKhauDN);
     }
@@ -43,18 +43,22 @@ public class DangNhapActivity extends AppCompatActivity {
     private void transferView(Class<?> classz) {
         startActivity(new Intent(DangNhapActivity.this, classz));
     }
-//
-//    public void checkLogin(View view) {
-//        userSql = new UserSql(this);
-//        String email =edtEmail.getText().toString();
-//        String password = edtPassWord.getText().toString();
-//        User user = new User(email,password);
-//        boolean result = userSql.isLogin(user);
-//        if (result){
-//            Toast.makeText(getBaseContext(), "Login thành công", Toast.LENGTH_SHORT).show();
-//            transferView(MainActivity.class);
-//        } else {
-//            Toast.makeText(getBaseContext(), "Login không thành công", Toast.LENGTH_SHORT).show();
-//        }
-//    }
+
+    public void checkLogin(View view) {
+        Log.i("info", "check login");
+        userSql = new UserSql(this);
+        String email = edtEmail.getText().toString();
+        String password = edtPassWord.getText().toString();
+        Log.i("info",email+ " : " + password);
+        User result = userSql.getUser(email);
+        Log.i("info",result.toString());
+        if (null != result && password.equals(result.getPassword())) {
+            Toast.makeText(getBaseContext(), "Login thành công", Toast.LENGTH_SHORT).show();
+            Log.i("info","Login thanh cong");
+            transferView(MainActivity.class);
+        } else {
+            Toast.makeText(getBaseContext(), "Login không thành công", Toast.LENGTH_SHORT).show();
+            Log.i("info","Login that bai");
+        }
+    }
 }

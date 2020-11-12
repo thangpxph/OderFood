@@ -19,18 +19,20 @@ import com.example.oderfood.sql.UserSql;
 public class DangKyActivity extends AppCompatActivity {
 
     private UserSql userSql;
-    private EditText edtHoTen, edtSoDienThoai, edtMatKhau;
+    private EditText edtHoTen, edtSoDienThoai, edtMatKhau,edtEmailDk;
     private Button btnDangKy;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        userSql = new UserSql(DangKyActivity.this);
+
         setContentView(R.layout.activity_dang_ky);
         edtHoTen = findViewById(R.id.edtHoTen);
         edtSoDienThoai = findViewById(R.id.edtSoDienThoai);
         edtMatKhau = findViewById(R.id.edtMatKhauDK);
-        userSql = new UserSql(DangKyActivity.this);
+        edtEmailDk = findViewById(R.id.edtEmailDK);
         btnDangKy = findViewById(R.id.btnDangKy);
         btnDangKy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +42,7 @@ public class DangKyActivity extends AppCompatActivity {
                         .name(edtHoTen.getText().toString())
                         .phone(edtSoDienThoai.getText().toString())
                         .password(edtMatKhau.getText().toString())
+                        .email(edtEmailDk.getText().toString())
                         .build();
                 insertMsg(user);
             }
@@ -47,7 +50,6 @@ public class DangKyActivity extends AppCompatActivity {
     }
 
     private void insertMsg(User user) {
-
         long result = userSql.insertUser(user);
         if (result > 0) {
             alertMsg("Đăng Ký Thành Công");

@@ -36,10 +36,25 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
+        android:id="@+id/edtEmailDK"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/edt_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Email"
+        android:inputType="textWebEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
         android:id="@+id/edtSoDienThoai"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="168dp"
         android:background="@drawable/edt_bg"
         android:ems="10"
         android:gravity="center"
@@ -54,7 +69,7 @@
         android:id="@+id/edtMatKhauDK"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="252dp"
         android:background="@drawable/edt_bg"
         android:ems="10"
         android:gravity="center"
@@ -69,7 +84,7 @@
         android:id="@+id/btnDangKy"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="200dp"
         android:background="@drawable/button_bg"
         android:text="Đăng Ký"
         android:textColor="@color/white"
