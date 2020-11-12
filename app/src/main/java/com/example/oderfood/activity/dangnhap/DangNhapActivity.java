@@ -53,11 +53,11 @@ public class DangNhapActivity extends AppCompatActivity {
         User result = userSql.getUser(email);
         Log.i("info",result.toString());
         if (null != result && password.equals(result.getPassword())) {
-            Toast.makeText(getBaseContext(), "Login thành công", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Đăng Nhập thành công", Toast.LENGTH_SHORT).show();
             Log.i("info","Login thanh cong");
             transferView(MainActivity.class);
         } else {
-            Toast.makeText(getBaseContext(), "Login không thành công", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Đăng nhập thất bại,vui lòng kiểm tra lại ", Toast.LENGTH_SHORT).show();
             Log.i("info","Login that bai");
         }
     }
