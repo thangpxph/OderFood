@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -49,12 +50,9 @@ public class BottomNavigation extends AppCompatActivity implements BottomNavigat
                         mBottomNavigation.getMenu().findItem(R.id.table).setChecked(true);
                         break;
                     case 2:
-                        mBottomNavigation.getMenu().findItem(R.id.category).setChecked(true);
-                        break;
-                    case 3:
                         mBottomNavigation.getMenu().findItem(R.id.notification).setChecked(true);
                         break;
-                    case 4:
+                    case 3:
                         mBottomNavigation.getMenu().findItem(R.id.profile).setChecked(true);
                         break;
                 }
@@ -87,13 +85,14 @@ public class BottomNavigation extends AppCompatActivity implements BottomNavigat
                 viewPager.setCurrentItem(1);
                 break;
             case R.id.category:
-                viewPager.setCurrentItem(2);
+                Intent intent = new Intent(BottomNavigation.this,CategoryManagerActivity.class);
+                startActivity(intent);
                 break;
             case R.id.notification:
-                viewPager.setCurrentItem(3);
+                viewPager.setCurrentItem(2);
                 break;
             case R.id.profile:
-                viewPager.setCurrentItem(4);
+                viewPager.setCurrentItem(3);
                 break;
         }
         return loadFragment(fragment);

@@ -25,10 +25,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return new TableFragment();
             case 2:
-                return new CategoryFragment();
-            case 3:
                 return new HistoryFragment();
-            case 4:
+            case 3:
                 return new ProfileFragment();
         }
         return null;
@@ -36,6 +34,6 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 5;
+        return 4;
     }
 }
