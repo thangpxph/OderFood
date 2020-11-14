@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.oderfood.fragment.CategoryFragment;
 import com.example.oderfood.fragment.HistoryFragment;
 import com.example.oderfood.fragment.HomeFragment;
 import com.example.oderfood.fragment.ProfileFragment;

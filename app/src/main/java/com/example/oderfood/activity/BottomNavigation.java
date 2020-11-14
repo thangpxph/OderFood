@@ -12,11 +12,6 @@ import android.view.MenuItem;
 
 import com.example.oderfood.R;
 import com.example.oderfood.adapter.ViewPagerAdapter;
-import com.example.oderfood.fragment.CategoryFragment;
-import com.example.oderfood.fragment.HistoryFragment;
-import com.example.oderfood.fragment.HomeFragment;
-import com.example.oderfood.fragment.ProfileFragment;
-import com.example.oderfood.fragment.TableFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BottomNavigation extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -30,7 +25,6 @@ public class BottomNavigation extends AppCompatActivity implements BottomNavigat
         setContentView(R.layout.activity_bottom_navigation);
         mBottomNavigation = findViewById(R.id.buttom_navigation);
         mBottomNavigation.setOnNavigationItemSelectedListener(this);
-
         viewPager = findViewById(R.id.view_pager);
         mViewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(mViewPagerAdapter);
@@ -85,7 +79,7 @@ public class BottomNavigation extends AppCompatActivity implements BottomNavigat
                 viewPager.setCurrentItem(1);
                 break;
             case R.id.category:
-                Intent intent = new Intent(BottomNavigation.this,CategoryManagerActivity.class);
+                Intent intent = new Intent(BottomNavigation.this,MainActivity.class);
                 startActivity(intent);
                 break;
             case R.id.notification:
