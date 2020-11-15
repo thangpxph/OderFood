@@ -15,7 +15,11 @@ import com.example.oderfood.R;
 import com.example.oderfood.model.Category;
 import com.example.oderfood.model.Food;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
+
+import static com.example.oderfood.network.ApiClient.BASE_URL;
 
 public class CategoryManagerAdapter extends RecyclerView.Adapter<CategoryManagerAdapter.ViewHolder> {
     private Context context;
@@ -24,6 +28,11 @@ public class CategoryManagerAdapter extends RecyclerView.Adapter<CategoryManager
     public CategoryManagerAdapter(Context context, ArrayList<Food> foodList) {
         this.context = context;
         this.foodList = foodList;
+    }
+
+    public void setFoodList(ArrayList<Food> foodList) {
+        this.foodList = foodList;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -37,7 +46,7 @@ public class CategoryManagerAdapter extends RecyclerView.Adapter<CategoryManager
     public void onBindViewHolder(@NonNull CategoryManagerAdapter.ViewHolder holder, int position) {
         Glide
                 .with(context)
-                .load(foodList.get(position).getUrlImage())
+                .load(BASE_URL+foodList.get(position).getUrlImage())
                 .centerCrop()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(holder.imgCategory);

@@ -34,21 +34,21 @@ public class CategoryManagerActivity extends AppCompatActivity {
             window.setStatusBarColor(this.getResources().getColor(R.color.colorPrimary));
             window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
         }
-        init();
+//        init();
     }
 
     private void getById() {
         rvCategory = findViewById(R.id.rv_category);
     }
 
-    private void init() {
-        categoryList =new ArrayList<>();
-        addCategory();
-        categoryManagerAdapter = new CategoryManagerAdapter(this, categoryList);
-        LinearLayoutManager manager = new LinearLayoutManager(CategoryManagerActivity.this,LinearLayoutManager.VERTICAL, false);
-        rvCategory.setLayoutManager(manager);
-        rvCategory.setAdapter(categoryManagerAdapter);
-    }
+//    private void init() {
+//        categoryList =new ArrayList<>();
+//        addCategory();
+//        categoryManagerAdapter = new CategoryManagerAdapter(this, categoryList);
+//        LinearLayoutManager manager = new LinearLayoutManager(CategoryManagerActivity.this,LinearLayoutManager.VERTICAL, false);
+//        rvCategory.setLayoutManager(manager);
+//        rvCategory.setAdapter(categoryManagerAdapter);
+//    }
     public void addCategory(){
         categoryList.add(new Category(R.drawable.orange, "Món khai vị"));
         categoryList.add(new Category(R.drawable.chili, "Món nướng"));

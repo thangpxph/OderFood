@@ -1,26 +1,33 @@
 package com.example.oderfood.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Category {
-    private int image;
-    private String name;
 
-    public Category(int image, String name) {
-        this.image = image;
-        this.name = name;
-    }
-    public int getImage() {
-        return image;
-    }
+    @SerializedName("_id")
+    private String id;
 
-    public void setImage(int image) {
-        this.image = image;
+    @SerializedName("nameCategory")
+    private String nameCategory;
+
+    public Category(String id, String nameCategory) {
+        this.id = id;
+        this.nameCategory = nameCategory;
     }
 
-    public String getName() {
-        return name;
+    public String getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNameCategory() {
+        return nameCategory;
+    }
+
+    public void setNameCategory(String nameCategory) {
+        this.nameCategory = nameCategory;
     }
 }
