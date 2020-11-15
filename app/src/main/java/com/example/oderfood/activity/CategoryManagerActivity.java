@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -12,14 +13,17 @@ import android.view.Window;
 import com.example.oderfood.R;
 import com.example.oderfood.adapter.CategoryManagerAdapter;
 import com.example.oderfood.model.Category;
+import com.example.oderfood.model.Food;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CategoryManagerActivity extends AppCompatActivity {
     Window window;
     ArrayList<Category> categoryList;
     RecyclerView rvCategory;
     CategoryManagerAdapter categoryManagerAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

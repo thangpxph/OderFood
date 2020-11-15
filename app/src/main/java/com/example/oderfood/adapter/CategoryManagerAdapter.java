@@ -10,18 +10,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.oderfood.R;
 import com.example.oderfood.model.Category;
+import com.example.oderfood.model.Food;
 
 import java.util.ArrayList;
 
 public class CategoryManagerAdapter extends RecyclerView.Adapter<CategoryManagerAdapter.ViewHolder> {
     private Context context;
-    private ArrayList<Category> categoryList;
+    private ArrayList<Food> foodList;
 
-    public CategoryManagerAdapter(Context context, ArrayList<Category> categoryList) {
+    public CategoryManagerAdapter(Context context, ArrayList<Food> foodList) {
         this.context = context;
-        this.categoryList = categoryList;
+        this.foodList = foodList;
     }
 
     @NonNull
@@ -33,13 +35,18 @@ public class CategoryManagerAdapter extends RecyclerView.Adapter<CategoryManager
 
     @Override
     public void onBindViewHolder(@NonNull CategoryManagerAdapter.ViewHolder holder, int position) {
-        holder.imgCategory.setImageResource(categoryList.get(position).getImage());
-        holder.tvNameCategory.setText(categoryList.get(position).getName());
+        Glide
+                .with(context)
+                .load(foodList.get(position).getUrlImage())
+                .centerCrop()
+                .placeholder(R.mipmap.ic_launcher)
+                .into(holder.imgCategory);
+        holder.tvNameCategory.setText(foodList.get(position).getNameDish());
     }
 
     @Override
     public int getItemCount() {
-        return categoryList.size();
+        return foodList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
