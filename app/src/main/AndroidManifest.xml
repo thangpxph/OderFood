@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.oderfood">
+    package="com.example.oderfood" >
 
     <application
         android:allowBackup="true"
@@ -8,18 +8,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activity.otp.OtpActivity"/>
+        android:theme="@style/AppTheme" >
+        <activity android:name=".activity.otp.OtpActivity" />
         <activity android:name=".activity.gui.GuiActivity" />
         <activity android:name=".activity.dangky.DangKyActivity" />
-        <activity android:name=".activity.dangnhap.DangNhapActivity">
+        <activity android:name=".activity.dangnhap.DangNhapActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.CategoryManagerActivity">
+        <activity android:name=".activity.CategoryManagerActivity" >
         </activity>
         <activity android:name=".activity.MainActivity" />
     </application>

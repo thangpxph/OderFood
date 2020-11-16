@@ -5,17 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.example.oderfood.R;
 import com.example.oderfood.activity.MainActivity;
 import com.example.oderfood.activity.dangky.DangKyActivity;
 import com.example.oderfood.activity.gui.GuiActivity;
-import com.example.oderfood.model.User;
 import com.example.oderfood.sql.UserSql;
 import com.google.android.material.snackbar.Snackbar;
 import com.koushikdutta.async.future.FutureCallback;

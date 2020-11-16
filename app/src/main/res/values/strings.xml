@@ -3,4 +3,8 @@
     <string name="well_come">Well Come</string>
     <string name="theloai">Thể loại món ăn</string>
     <string name="item_khaivi">Món khai vị</string>
+    <string name="title_activity_menu">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
