@@ -2,6 +2,7 @@ package com.example.oderfood.service;
 
 import com.example.oderfood.model.Category;
 import com.example.oderfood.model.Food;
+import com.example.oderfood.model.Table;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,4 +16,7 @@ public interface ApiService {
 
     @GET("/api/getCategory")
     Call<ArrayList<Category>> getCategory();
+
+    @GET("/api/getAllTable")
+    Call<ArrayList<Table>> getTable();
 }
