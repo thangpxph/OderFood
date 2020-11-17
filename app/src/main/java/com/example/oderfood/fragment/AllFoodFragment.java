@@ -60,8 +60,6 @@ public class AllFoodFragment extends Fragment {
                 Log.d("TAG","Response = "+t.toString());
             }
         });
-
-
         return view;
     }
 }

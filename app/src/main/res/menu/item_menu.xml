@@ -8,18 +8,18 @@
     <item
         android:id="@+id/table"
         android:icon="@drawable/ic_table"
-        android:title="home" />
+        android:title="table" />
     <item
         android:id="@+id/category"
         android:icon="@drawable/ic_category"
-        android:title="home" />
+        android:title="Category" />
     <item
         android:id="@+id/notification"
         android:icon="@drawable/ic_history"
-        android:title="home" />
+        android:title="History" />
     <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_profile"
-        android:title="home" />
+        android:title="Profile" />
 
 </menu>
