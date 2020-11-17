@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">OderFood</string>
+    <string name="well_come">Well Come</string>
+    <string name="theloai">Thể loại món ăn</string>
+    <string name="item_khaivi">Món khai vị</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="welcome">WELCOME</string>
+    <string name="dangnhap">Đăng nhập</string>
+    <string name="quenmatkhau">Quên mật khẩu ?</string>
+    <string name="notAccount">Bạn chưa có tài khoản</string>
+    <string name="dangky">Đăng ký</string>
+    <string name="taotaikhoan">Tạo tài khoản</string>
+    <string name="hovaten">Họ và tên</string>
+    <string name="sodienthoai">Số điện thoại</string>
+    <string name="matkhau">Mật khẩu</string>
+    <string name="nhapsodienthoai">Nhập số điện thoại</string>
+    <string name="please">Vui lòng nhập số điện thoại đăng ký.
+    Mã OTP sẽ gửi về cho bạn</string>
+    <string name="gui">Gửi</string>
+    <string name="xacthucmaotp">Xác thực mã OTP</string>
+    <string name="pleaseotp">Vui lòng nhập mã otp bạn vừa nhận được</string>
+    <string name="xacnhan">Xác nhận</string>
+    <string name="maotp">Nhập mã otp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="tatca">Tất cả</string>
+    <string name="douong">Đồ uống</string>
+    <string name="nuong">Nướng</string>
+    <string name="lau">Lẩu</string>
+    <string name="monchinh">Món chính</string>
 </resources>
