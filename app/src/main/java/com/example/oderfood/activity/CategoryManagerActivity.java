@@ -49,12 +49,12 @@ public class CategoryManagerActivity extends AppCompatActivity {
 //        rvCategory.setLayoutManager(manager);
 //        rvCategory.setAdapter(categoryManagerAdapter);
 //    }
-    public void addCategory(){
-        categoryList.add(new Category(R.drawable.orange, "Món khai vị"));
-        categoryList.add(new Category(R.drawable.chili, "Món nướng"));
-        categoryList.add(new Category(R.drawable.lau, "Món lẩu"));
-        categoryList.add(new Category(R.drawable.orange, "Món khai vị"));
-        categoryList.add(new Category(R.drawable.chili, "Món nướng"));
-        categoryList.add(new Category(R.drawable.lau, "Món lẩu"));
-}
+//    public void addCategory(){
+//        categoryList.add(new Category(R.drawable.orange, "Món khai vị"));
+//        categoryList.add(new Category(R.drawable.chili, "Món nướng"));
+//        categoryList.add(new Category(R.drawable.lau, "Món lẩu"));
+//        categoryList.add(new Category(R.drawable.orange, "Món khai vị"));
+//        categoryList.add(new Category(R.drawable.chili, "Món nướng"));
+//        categoryList.add(new Category(R.drawable.lau, "Món lẩu"));
+//}
 }
