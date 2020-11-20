@@ -8,4 +8,5 @@
     <color name="colorBackgroundEditText">#DDDDDD</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorDark">#000000</color>
+    <color name="bg">#30000000</color>
 </resources>
