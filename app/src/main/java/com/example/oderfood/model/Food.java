@@ -3,14 +3,6 @@ package com.example.oderfood.model;
 import com.google.gson.annotations.SerializedName;
 
 public class Food {
-//    Tên món ăn
-//    loại món ăn
-//    thời gian
-//    giá
-//    id món
-//    Ảnh minh họa
-//    thành phần
-
     private String id;
 
     @SerializedName("nameDish")
