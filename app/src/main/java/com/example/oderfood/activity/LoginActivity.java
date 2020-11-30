@@ -91,6 +91,8 @@ public class LoginActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = getSharedPreferences("my_app", MODE_PRIVATE).edit();
                 editor.putString("token", loginResponse.getToken());
                 editor.apply();
+
+                startActivity(new Intent(LoginActivity.this,BottomNavigation.class));
             }
 
             @Override

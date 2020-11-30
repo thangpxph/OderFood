@@ -14,6 +14,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 
 public interface ApiService {
@@ -23,12 +24,12 @@ public interface ApiService {
     @GET("/api/getCategory")
     Call<ArrayList<Category>> getCategory();
 
-    @GET("/api/getAllTable")
-    Call<ArrayList<Table>> getTable();
-
     @POST("api/v1/login")
     Call<LoginResponse> postLogin(@Body LoginRequest loginRequest);
 
     @POST("api/v1/signin")
     Call<SignUpResponse> register(@Body SignUpRequest signUpRequest);
+
+    @GET("api/v1/table")
+    Call<List<Table>> getTables(@Header("Authorization") String token);
 }
